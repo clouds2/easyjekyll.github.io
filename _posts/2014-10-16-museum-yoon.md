@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 일년에 한 두번 만나는 거사님
-tags: 박물관 윤선생
+tags: museum 박물관 윤선생 yoon
 ---
 
 ![]({{ site.baseurl }}/images/Museum-2014-10-16-27.png)
