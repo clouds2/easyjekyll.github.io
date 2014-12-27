@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello, You're up and running!
-tags: first blog post jekyll test 박물관 yoon
+tags: first blog post jekyll test '박물관' yoon
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below :point_down:).
