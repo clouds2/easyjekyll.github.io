@@ -9,7 +9,23 @@ layout: default
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
-        {{ content}}
+        {{ post.content}}
+ <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+  <br>
+
+  <div>
+    <ul class="tags post-tags cf">
+      <li>Tagged:</li>
+      {% for tag in page.tags %}
+      <li><a href="/search/?tags={{ tag }}">{{ tag | downcase }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <br>
+
+  
  <!--knlee
         {{ post.content | strip_html | truncatewords:40}}
  -->
