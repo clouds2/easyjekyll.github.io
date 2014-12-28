@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 일년에 한 두번 만나는 거사님
+title: 거사님과 박물관에서
 tags: museum 박물관 윤선생 yoon
 ---
 

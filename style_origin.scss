@@ -7,6 +7,7 @@
 
 @import "_reset";
 @import "_variables";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -18,9 +19,9 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+	background: #FCFCFC;
+  font: 16px/1.4 'Apple SD Gothic Neo', 'Nanum Gothic', '돋움', Dotum;
+  color: #222326;
 }
 
 .container {
@@ -31,7 +32,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: RyuGHbatangOTF, 'Apple SD Gothic Neo', 'Nanum Gothic', '돋움', Dotum;
   color: $darkerGray;
   font-weight: bold;
   
@@ -45,11 +46,15 @@ h1, h2, h3, h4, h5, h6 {
 }
   
 h1 {  
-  font-size: 30px;
+  font-size: 28px;
   a {
     color: inherit;
   }
 }
+
+/* small 추가 */
+h1 small { font-weight: 400; font-size: 50%; color: #999; }
+h2 small { font-weight: 400; font-size: 50%; color: #999; }
 
 h2 {  
   font-size: 24px;
@@ -106,14 +111,31 @@ strong, b {
   font-weight: bold;
 }
 
+img.inline.pull-right {
+  margin-left: 1em;
+}
+
 img {
   max-width: 100%;
 }
 
 .date {
-  font-style: italic;
-  color: $gray;
+  font-family: 'Courier New';
+  font-style: normal;
+  color: #CCC;
+  padding-bottom: 1em;
 }
+
+.post  {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+
+.post p {
+  text-align: justify;
+}
+
 
 // Specify the color of the selection
 ::-moz-selection {
@@ -146,7 +168,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .masthead {
@@ -209,7 +231,7 @@ nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue; 
-  font-size: 18px;
+  font-size: 16px;
   
   @include mobile {
     float: none;
@@ -241,22 +263,30 @@ nav {
   border-bottom: 1px solid $lightGray;
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
+//.posts > .post:last-child {
+//  padding-bottom: 1em;
+//  border-bottom: none;
+//}
 
 .post { 
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
+    font-family: '나눔고딕', 'Nanum Gothic', '돋움', Dotum;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 50px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
   }
 
-  .comments {
+  .post .date {
+  color: #999;
+  font-family: "Titillium Web", monospace;
+  font-size: 90%;
+  margin-right: 0.5em;
+}
+
+.comments {
     margin-top: 10px;
   }
 
@@ -266,8 +296,27 @@ nav {
   }
 }
 
+.post code {
+border-top-left-radius: 3px; 
+border-top-right-radius: 3px; 
+border-bottom-right-radius: 3px; 
+border-bottom-left-radius: 3px; 
+word-break: break-all; 
+word-wrap: break-word; 
+border: 1px solid rgb(204, 204, 204); 
+padding: 0px 5px; 
+margin: 0px 2px;
+}
+
+
+
+.post pre code {
+  border: none;
+}
+
+
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 25px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
@@ -321,6 +370,32 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+
+// 본문 제목 가운데 정렬, 날짜 기입
+article h1 {
+  margin-bottom: 8px;
+  line-height: 120%;
+  text-align: center !important;
+}
+
+.meta {
+  color: #666;
+  display: inline-block;
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+  margin-top: 4px;
+  padding: 4px 8px;
+}
+
+
+
+
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+// @import "_highlights";
+
+
 
 /*****************************************************************************/
 /*
