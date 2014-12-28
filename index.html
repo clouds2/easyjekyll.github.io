@@ -11,11 +11,7 @@ layout: default
       <div class="entry"> 
         {{ post.content | strip_html | truncatewords:40}}
       </div>
-
-
-      <!--knlee
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">더 읽기</a>
-      -->
     </article>
   {% endfor %}
 </div>
